@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚾ MLB YRFI/NRFI Predictions Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            background: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .stat-card h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            color: #FFD700;
+        }
+        
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .predictions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .game-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+        
+        .game-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .game-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .teams {
+            font-size: 1.1em;
+            font-weight: bold;
+        }
+        
+        .prediction {
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .yrfi {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+        }
+        
+        .nrfi {
+            background: linear-gradient(45deg, #f44336, #da190b);
+        }
+        
+        .no-bet {
+            background: linear-gradient(45deg, #666, #555);
+        }
+        
+        .confidence-bar {
+            width: 100%;
+            height: 20px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 10px 0;
+        }
+        
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #45B7D1, #96CEB4, #FFEAA7);
+            border-radius: 10px;
+            transition: width 0.3s ease;
+        }
+        
+        .bet-recommendation {
+            padding: 8px 15px;
+            border-radius: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        
+        .excellent-bet { background: linear-gradient(45deg, #FFD700, #FFA500); color: #000; }
+        .good-bet { background: linear-gradient(45deg, #4CAF50, #45a049); }
+        .fair-bet { background: linear-gradient(45deg, #2196F3, #1976D2); }
+        .poor-bet { background: linear-gradient(45deg, #FF9800, #F57C00); }
+        .pass { background: linear-gradient(45deg, #666, #555); }
+        
+        .summary-section {
+            background: rgba(255,255,255,0.1);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 15px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .refresh-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.3s ease;
+        }
+        
+        .refresh-btn:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .predictions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⚾ MLB YRFI/NRFI Predictions Dashboard</h1>
+            <h2>📅 June 11, 2025</h2>
+            <p>🤖 MLB Predictor v4 (Balanced) | 🎯 Professional Betting Recommendations</p>
+        </div>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>🎮 Total Games</h3>
+                <div class="stat-number">15</div>
+            </div>
+            <div class="stat-card">
+                <h3>💰 Betting Games</h3>
+                <div class="stat-number">11</div>
+                <p>73.3% of games</p>
+            </div>
+            <div class="stat-card">
+                <h3>📈 Avg Confidence</h3>
+                <div class="stat-number">37.7%</div>
+            </div>
+            <div class="stat-card">
+                <h3>⭐ Strong Bets</h3>
+                <div class="stat-number">11</div>
+            </div>
+        </div>
+        
+        <div class="summary-section">
+            <h2 style="text-align: center; margin-bottom: 20px;">📊 Today's Summary</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <h4>🔥 YRFI Predictions</h4>
+                    <div style="font-size: 1.5em; font-weight: bold;">4</div>
+                </div>
+                <div class="summary-item">
+                    <h4>🔴 NRFI Predictions</h4>
+                    <div style="font-size: 1.5em; font-weight: bold;">7</div>
+                </div>
+                <div class="summary-item">
+                    <h4>✅ Good Bets</h4>
+                    <div style="font-size: 1.5em; font-weight: bold;">0</div>
+                </div>
+                <div class="summary-item">
+                    <h4>📍 Fair Bets</h4>
+                    <div style="font-size: 1.5em; font-weight: bold;">0</div>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; margin-bottom: 20px;">🎮 Today's Games</h2>
+        <div class="predictions-grid">
+
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 1</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Athletics</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Los Angeles Angels</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">55.4%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 55.4%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 39.9%</span>
+                    <span>🔴 NRFI: 60.1%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 2</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Good</span>
+                </div>
+                <div class="teams">🛣️ Los Angeles Dodgers</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 San Diego Padres</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">0.2%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 0.2%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 50.0%</span>
+                    <span>🔴 NRFI: 50.0%</span>
+                </div>
+                
+                <div class="bet-recommendation pass">
+                    ❌ PASS
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 3</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Good</span>
+                </div>
+                <div class="teams">🛣️ Toronto Blue Jays</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 St. Louis Cardinals</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">18.3%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 18.3%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 45.4%</span>
+                    <span>🔴 NRFI: 54.6%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 4</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ San Francisco Giants</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Colorado Rockies</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">5.4%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 5.4%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 51.1%</span>
+                    <span>🔴 NRFI: 48.9%</span>
+                </div>
+                
+                <div class="bet-recommendation pass">
+                    ❌ PASS
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 5</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Seattle Mariners</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Arizona Diamondbacks</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">64.7%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 64.7%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 61.9%</span>
+                    <span>🔴 NRFI: 38.1%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 6</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Cincinnati Reds</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Cleveland Guardians</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">63.7%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 63.7%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 38.3%</span>
+                    <span>🔴 NRFI: 61.7%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 7</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Chicago White Sox</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Houston Astros</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">16.8%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 16.8%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 46.6%</span>
+                    <span>🔴 NRFI: 53.4%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 8</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ New York Yankees</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Kansas City Royals</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">2.3%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 2.3%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 49.5%</span>
+                    <span>🔴 NRFI: 50.5%</span>
+                </div>
+                
+                <div class="bet-recommendation pass">
+                    ❌ PASS
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 9</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Miami Marlins</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Pittsburgh Pirates</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">25.3%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 25.3%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 44.9%</span>
+                    <span>🔴 NRFI: 55.1%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 10</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Chicago Cubs</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Philadelphia Phillies</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">36.1%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 36.1%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 57.2%</span>
+                    <span>🔴 NRFI: 42.8%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 11</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Atlanta Braves</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Milwaukee Brewers</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">29.5%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 29.5%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 55.9%</span>
+                    <span>🔴 NRFI: 44.1%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 12</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Washington Nationals</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 New York Mets</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">15.6%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 15.6%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 46.9%</span>
+                    <span>🔴 NRFI: 53.1%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 13</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Texas Rangers</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Minnesota Twins</div>
+                
+                <div class="prediction nrfi">
+                    NRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">57.2%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 57.2%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 39.6%</span>
+                    <span>🔴 NRFI: 60.4%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 14</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Tampa Bay Rays</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Boston Red Sox</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">32.0%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 32.0%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 56.4%</span>
+                    <span>🔴 NRFI: 43.6%</span>
+                </div>
+                
+                <div class="bet-recommendation excellent-bet">
+                    ⭐ EXCELLENT BET
+                </div>
+            </div>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    <span style="font-size: 0.9em; color: #FFD700;">Game 15</span>
+                    <span style="font-size: 0.8em; color: #ccc;">Quality: Excellent</span>
+                </div>
+                <div class="teams">🛣️ Detroit Tigers</div>
+                <div style="text-align: center; margin: 5px 0;">@</div>
+                <div class="teams">🏠 Baltimore Orioles</div>
+                
+                <div class="prediction yrfi">
+                    YRFI
+                </div>
+                
+                <div style="margin: 15px 0;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Confidence:</span>
+                        <span style="font-weight: bold;">13.3%</span>
+                    </div>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill" style="width: 13.3%;"></div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; margin: 10px 0;">
+                    <span>🔥 YRFI: 52.7%</span>
+                    <span>🔴 NRFI: 47.3%</span>
+                </div>
+                
+                <div class="bet-recommendation pass">
+                    ❌ PASS
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p>🤖 Model: MLB Predictor v4 (Balanced)</p>
+            <p>📊 Professional betting recommendations with balanced predictions</p>
+            <p>🕒 Generated at 03:14 PM</p>
+            <a href="#" onclick="location.reload();" class="refresh-btn">🔄 Refresh Data</a>
+        </div>
+    </div>
+    
+    <script>
+        // Auto-refresh every 5 minutes
+        setTimeout(function(){
+            location.reload();
+        }, 300000);
+        
+        // Add click interactivity
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = this.style.transform === 'scale(1.02)' ? 'scale(1)' : 'scale(1.02)';
+            });
+        });
+        
+        // Smooth scroll animations
+        document.querySelectorAll('.game-card').forEach((card, index) => {
+            card.style.animationDelay = (index * 0.1) + 's';
+            card.style.animation = 'fadeInUp 0.6s ease forwards';
+        });
+    </script>
+    
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</body>
+</html>

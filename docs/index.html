@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚾ MLB YRFI/NRFI Predictions - June 11, 2025</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .date {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .summary-card {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        
+        .summary-card h3 {
+            font-size: 2rem;
+            margin-bottom: 5px;
+            color: #FFD700;
+        }
+        
+        .predictions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+        }
+        
+        .prediction-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border-left: 5px solid;
+        }
+        
+        .prediction-card.yrfi {
+            border-left-color: #4CAF50;
+        }
+        
+        .prediction-card.nrfi {
+            border-left-color: #f44336;
+        }
+        
+        .prediction-card.no-bet {
+            border-left-color: #757575;
+            opacity: 0.7;
+        }
+        
+        .game-info {
+            margin-bottom: 15px;
+        }
+        
+        .teams {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .pitchers {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .prediction-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .prediction {
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+        
+        .prediction.yrfi {
+            background: #4CAF50;
+            color: white;
+        }
+        
+        .prediction.nrfi {
+            background: #f44336;
+            color: white;
+        }
+        
+        .prediction.no-bet {
+            background: #757575;
+            color: white;
+        }
+        
+        .confidence {
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+        
+        .details {
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            opacity: 0.7;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .predictions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>⚾ MLB YRFI/NRFI Predictions</h1>
+        <div class="date">June 11, 2025 • Updated: 03:59 PM EST</div>
+    </div>
+    
+    <div class="summary">
+        <div class="summary-card">
+            <h3>15</h3>
+            <p>Total Games</p>
+        </div>
+        <div class="summary-card">
+            <h3>11</h3>
+            <p>Betting Opportunities</p>
+        </div>
+        <div class="summary-card">
+            <h3>4</h3>
+            <p>YRFI Predictions</p>
+        </div>
+        <div class="summary-card">
+            <h3>7</h3>
+            <p>NRFI Predictions</p>
+        </div>
+    </div>
+    
+    <div class="predictions-grid">
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Athletics @ Los Angeles Angels</div>
+                <div class="pitchers">JP Sears vs Kyle Hendricks</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">55.4%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #1
+            </div>
+        </div>
+
+        <div class="prediction-card no-bet">
+            <div class="game-info">
+                <div class="teams">Los Angeles Dodgers @ San Diego Padres</div>
+                <div class="pitchers">Justin Wrobleski vs Randy Vásquez</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction no-bet">NO BET</div>
+                <div class="confidence">0.2%</div>
+            </div>
+            <div class="details">
+                Data Quality: Good | Game #2
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Toronto Blue Jays @ St. Louis Cardinals</div>
+                <div class="pitchers">Eric Lauer vs Matthew Liberatore</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">18.3%</div>
+            </div>
+            <div class="details">
+                Data Quality: Good | Game #3
+            </div>
+        </div>
+
+        <div class="prediction-card no-bet">
+            <div class="game-info">
+                <div class="teams">San Francisco Giants @ Colorado Rockies</div>
+                <div class="pitchers">Robbie Ray vs Kyle Freeland</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction no-bet">NO BET</div>
+                <div class="confidence">5.4%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #4
+            </div>
+        </div>
+
+        <div class="prediction-card yrfi">
+            <div class="game-info">
+                <div class="teams">Seattle Mariners @ Arizona Diamondbacks</div>
+                <div class="pitchers">Bryan Woo vs Eduardo Rodriguez</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction yrfi">YRFI</div>
+                <div class="confidence">64.7%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #5
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Cincinnati Reds @ Cleveland Guardians</div>
+                <div class="pitchers">Nick Lodolo vs Logan Allen</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">63.7%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #6
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Chicago White Sox @ Houston Astros</div>
+                <div class="pitchers">Sean Burke vs Ryan Gusto</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">16.8%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #7
+            </div>
+        </div>
+
+        <div class="prediction-card no-bet">
+            <div class="game-info">
+                <div class="teams">New York Yankees @ Kansas City Royals</div>
+                <div class="pitchers">Clarke Schmidt vs Kris Bubic</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction no-bet">NO BET</div>
+                <div class="confidence">2.3%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #8
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Miami Marlins @ Pittsburgh Pirates</div>
+                <div class="pitchers">Cal Quantrill vs Bailey Falter</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">25.3%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #9
+            </div>
+        </div>
+
+        <div class="prediction-card yrfi">
+            <div class="game-info">
+                <div class="teams">Chicago Cubs @ Philadelphia Phillies</div>
+                <div class="pitchers">Ben Brown vs Jesús Luzardo</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction yrfi">YRFI</div>
+                <div class="confidence">36.1%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #10
+            </div>
+        </div>
+
+        <div class="prediction-card yrfi">
+            <div class="game-info">
+                <div class="teams">Atlanta Braves @ Milwaukee Brewers</div>
+                <div class="pitchers">Spencer Schwellenbach vs Chad Patrick</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction yrfi">YRFI</div>
+                <div class="confidence">29.5%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #11
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Washington Nationals @ New York Mets</div>
+                <div class="pitchers">Jake Irvin vs David Peterson</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">15.6%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #12
+            </div>
+        </div>
+
+        <div class="prediction-card nrfi">
+            <div class="game-info">
+                <div class="teams">Texas Rangers @ Minnesota Twins</div>
+                <div class="pitchers">Jack Leiter vs David Festa</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction nrfi">NRFI</div>
+                <div class="confidence">57.2%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #13
+            </div>
+        </div>
+
+        <div class="prediction-card yrfi">
+            <div class="game-info">
+                <div class="teams">Tampa Bay Rays @ Boston Red Sox</div>
+                <div class="pitchers">Zack Littell vs Walker Buehler</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction yrfi">YRFI</div>
+                <div class="confidence">32.0%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #14
+            </div>
+        </div>
+
+        <div class="prediction-card no-bet">
+            <div class="game-info">
+                <div class="teams">Detroit Tigers @ Baltimore Orioles</div>
+                <div class="pitchers">Casey Mize vs Zach Eflin</div>
+            </div>
+            <div class="prediction-info">
+                <div class="prediction no-bet">NO BET</div>
+                <div class="confidence">13.3%</div>
+            </div>
+            <div class="details">
+                Data Quality: Excellent | Game #15
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <p>🎯 Predictions generated using advanced MLB statistical analysis</p>
+        <p>⚡ Auto-updated daily at 6:00 AM EST</p>
+        <p>📊 For entertainment purposes only. Please gamble responsibly.</p>
+    </div>
+    
+    <script>
+        // Auto-refresh every 5 minutes during game hours (1 PM - 11 PM EST)
+        const now = new Date();
+        const hour = now.getHours();
+        if (hour >= 13 && hour <= 23) {
+            setTimeout(() => {
+                window.location.reload();
+            }, 300000); // 5 minutes
+        }
+    </script>
+</body>
+</html>
