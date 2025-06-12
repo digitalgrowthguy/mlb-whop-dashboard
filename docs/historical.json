@@ -1,51 +1,14 @@
-[
-  {
-    "date": "2025-06-11",
-    "total_games": 15,
-    "betting_opportunities": 11,
-    "yrfi_predictions": 4,
-    "nrfi_predictions": 7
-  },
-  {
-    "date": "2025-06-10",
-    "total_games": 15,
-    "betting_opportunities": 12,
-    "yrfi_predictions": 8,
-    "nrfi_predictions": 4
-  },
-  {
-    "date": "2025-06-09",
-    "total_games": 9,
-    "betting_opportunities": 5,
-    "yrfi_predictions": 3,
-    "nrfi_predictions": 2
-  },
-  {
-    "date": "2025-06-08",
-    "total_games": 15,
-    "betting_opportunities": 10,
-    "yrfi_predictions": 4,
-    "nrfi_predictions": 6
-  },
-  {
-    "date": "2025-06-07",
-    "total_games": 16,
-    "betting_opportunities": 13,
-    "yrfi_predictions": 7,
-    "nrfi_predictions": 6
-  },
-  {
-    "date": "2025-06-06",
-    "total_games": 14,
-    "betting_opportunities": 8,
-    "yrfi_predictions": 2,
-    "nrfi_predictions": 6
-  },
-  {
-    "date": "2025-06-05",
-    "total_games": 13,
-    "betting_opportunities": 11,
-    "yrfi_predictions": 4,
-    "nrfi_predictions": 7
+{
+  "last_updated": "2025-06-11 19:32:41 EST",
+  "note": "Historical performance tracking will be implemented as data accumulates",
+  "grading_system": {
+    "A+": "Elite (70%+ confidence)",
+    "A": "Excellent (60%+ confidence)",
+    "B+": "Strong (50%+ confidence)",
+    "B": "Good (40%+ confidence)",
+    "C+": "Fair (30%+ confidence)",
+    "C": "Decent (20%+ confidence)",
+    "D": "Risky (15%+ confidence)",
+    "F": "Avoid (<15% confidence)"
   }
-]
+}
