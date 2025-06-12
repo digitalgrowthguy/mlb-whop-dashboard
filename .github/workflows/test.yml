@@ -1,0 +1,93 @@
+name: Test and Validate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Test MLB API connection
+      run: |
+        python -c "
+        import requests
+        import json
+        from datetime import datetime
+        
+        # Test MLB Stats API
+        today = datetime.now().strftime('%Y-%m-%d')
+        url = f'https://statsapi.mlb.com/api/v1/schedule?sportId=1&date={today}'
+        
+        try:
+            response = requests.get(url, timeout=10)
+            response.raise_for_status()
+            data = response.json()
+            games = data.get('dates', [{}])[0].get('games', [])
+            print(f'✅ MLB API working - Found {len(games)} games for {today}')
+        except Exception as e:
+            print(f'❌ MLB API test failed: {e}')
+            exit(1)
+        "
+    
+    - name: Test predictor initialization
+      run: |
+        python -c "
+        from predictor import MLBPredictor
+        try:
+            predictor = MLBPredictor()
+            print('✅ Predictor initialized successfully')
+        except Exception as e:
+            print(f'❌ Predictor initialization failed: {e}')
+            exit(1)
+        "
+    
+    - name: Test database setup
+      run: |
+        python setup_database.py
+        
+    - name: Test data fetching
+      run: |
+        python fetch_mlb_data.py
+        
+    - name: Test dashboard generation
+      run: |
+        python generate_static_site.py
+        
+    - name: Validate generated files
+      run: |
+        # Check if required files were generated
+        if [ ! -f "docs/index.html" ]; then
+          echo "❌ index.html not generated"
+          exit 1
+        fi
+        
+        if [ ! -f "docs/data.json" ]; then
+          echo "❌ data.json not generated"
+          exit 1
+        fi
+        
+        # Check if HTML contains expected content
+        if ! grep -q "MLB YRFI/NRFI Predictions" docs/index.html; then
+          echo "❌ HTML doesn't contain expected title"
+          exit 1
+        fi
+        
+        echo "✅ All validation checks passed"

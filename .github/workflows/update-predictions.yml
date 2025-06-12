@@ -8,6 +8,11 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   update-predictions:
     runs-on: ubuntu-latest
@@ -16,7 +21,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
+        fetch-depth: 0
     
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -30,42 +35,32 @@ jobs:
     
     - name: Fetch latest MLB data
       run: |
-        # Add your data fetching script here
         python fetch_mlb_data.py
       env:
-        # Add any API keys as GitHub secrets
-        MLB_API_KEY: ${{ secrets.MLB_API_KEY }}
+        # MLB Stats API is free and doesn't require API key
+        PYTHONIOENCODING: utf-8
     
     - name: Generate static site
       run: |
         python generate_static_site.py
+      env:
+        PYTHONIOENCODING: utf-8
     
     - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add docs/
-        git add mlb_data.db
+        git config --local user.name "GitHub Action Bot"
         
-        # Only commit if there are changes
+        # Add all changes
+        git add .
+        
+        # Check if there are changes to commit
         if git diff --staged --quiet; then
           echo "No changes to commit"
         else
-          git commit -m "Update MLB predictions for $(date +'%Y-%m-%d')"
-          git push
+          git commit -m "🤖 Auto-update MLB predictions for $(date +'%Y-%m-%d %H:%M UTC')"
+          git push origin main
+          echo "Changes committed and pushed successfully"
         fi
-
-  deploy:
-    needs: update-predictions
-    runs-on: ubuntu-latest
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-    
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./docs
-        publish_branch: gh-pages
+  # GitHub Pages deployment happens automatically when pushing to main
+  # since we're using the 'Deploy from a branch' setting
