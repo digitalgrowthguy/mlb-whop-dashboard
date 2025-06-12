@@ -17,9 +17,9 @@ def setup_database():
     
     # Check if source database exists
     if os.path.exists(source_db):
-        print("📊 Copying database from main project...")
+        print("Copying database from main project...")
         shutil.copy2(source_db, target_db)
-        print(f"✅ Database copied to {target_db}")
+        print(f"Database copied to {target_db}")
         return True
     else:
         print("⚠️ Source database not found, creating minimal database...")
@@ -65,7 +65,7 @@ def create_minimal_database(db_path):
     conn.commit()
     conn.close()
     
-    print(f"✅ Created minimal database with {len(sample_games)} sample games")
+    print(f"Created minimal database with {len(sample_games)} sample games")
 
 def verify_database():
     """Verify database has the required structure"""
@@ -76,34 +76,34 @@ def verify_database():
         # Check if games table exists
         cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name='games'")
         if not cursor.fetchone():
-            print("❌ Games table not found")
+            print("Games table not found")
             return False
         
         # Check for recent games
         cursor.execute("SELECT COUNT(*) FROM games WHERE game_date >= '2025-01-01'")
         count = cursor.fetchone()[0]
-        print(f"📊 Found {count} games in database")
+        print(f"Found {count} games in database")
         
         conn.close()
         return True
         
     except Exception as e:
-        print(f"❌ Database verification failed: {e}")
+        print(f"Database verification failed: {e}")
         return False
 
 def main():
     """Main setup function"""
-    print("🔧 Setting up MLB Predictor Database")
+    print("Setting up MLB Predictor Database")
     print("=" * 40)
     
     if setup_database():
         if verify_database():
-            print("\n✅ Database setup complete!")
-            print("🚀 Ready to run predictions")
+            print("\nDatabase setup complete!")
+            print("Ready to run predictions")
         else:
-            print("\n❌ Database verification failed")
+            print("\nDatabase verification failed")
     else:
-        print("\n❌ Database setup failed")
+        print("\nDatabase setup failed")
 
 if __name__ == "__main__":
     main()

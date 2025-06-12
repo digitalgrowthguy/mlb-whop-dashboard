@@ -46,7 +46,60 @@ class MLBDataFetcher:
         self.conn.commit()
         logger.info("Database tables created/verified")
     
-    def get_schedule(self, start_date, end_date):
+    def get_today_games(self):
+        """Get TODAY'S actual MLB games"""
+        today = datetime.now().strftime('%Y-%m-%d')
+        logger.info(f"Fetching TODAY'S games for {today}")
+        
+        url = f"{self.base_url}/schedule"
+        params = {
+            'sportId': 1,  # MLB
+            'date': today,
+            'hydrate': 'team,probablePitcher'
+        }
+        
+        try:
+            response = requests.get(url, params=params)
+            response.raise_for_status()
+            data = response.json()
+            
+            games = []
+            if data.get('dates'):
+                for date_info in data['dates']:
+                    for game in date_info.get('games', []):
+                        game_id = str(game['gamePk'])
+                        home_team = game['teams']['home']['team']['name']
+                        away_team = game['teams']['away']['team']['name']
+                        
+                        # Get probable pitchers
+                        home_pitcher = "Unknown"
+                        away_pitcher = "Unknown"
+                        
+                        if 'probablePitcher' in game['teams']['home']:
+                            home_pitcher = game['teams']['home']['probablePitcher']['fullName']
+                        if 'probablePitcher' in game['teams']['away']:
+                            away_pitcher = game['teams']['away']['probablePitcher']['fullName']
+                        
+                        games.append({
+                            'game_id': game_id,
+                            'game_date': today,
+                            'season': 2025,
+                            'home_team_name': home_team,
+                            'away_team_name': away_team,
+                            'home_pitcher': home_pitcher,
+                            'away_pitcher': away_pitcher,
+                            'status': game['status']['detailedState']
+                        })
+            
+            logger.info(f"✅ Found {len(games)} games for today")
+            for game in games:
+                logger.info(f"   {game['away_team_name']} @ {game['home_team_name']} - {game['away_pitcher']} vs {game['home_pitcher']}")
+            
+            return games
+            
+        except Exception as e:
+            logger.error(f"Error fetching today's games: {e}")
+            return []
         """Get MLB schedule for date range"""
         url = f"{self.base_url}/schedule"
         params = {
@@ -218,8 +271,7 @@ class MLBDataFetcher:
                     game_id, game_date, season, home_team, away_team,
                     home_pitcher, away_pitcher, home_first_runs, away_first_runs,
                     home_score, away_score, status
-                ))
-                
+                ))                
                 games_updated += 1
                 logger.info(f"Updated: {away_team} @ {home_team} ({game_date}) - Status: {status}")
                 
@@ -229,32 +281,51 @@ class MLBDataFetcher:
         self.conn.commit()
         logger.info(f"✅ Updated {games_updated} games")
     
-    def get_today_games(self):
-        """Get today's scheduled games"""
-        today = datetime.now().strftime('%Y-%m-%d')
-        return self.get_schedule(today, today)
-    
     def close(self):
         """Close database connection"""
         self.conn.close()
 
 def main():
-    """Main function to update MLB data"""
-    fetcher = MLBDataFetcher()
+    """Main function to fetch TODAY'S real MLB data"""
+    print("Fetching TODAY'S Real MLB Games...")
     
-    try:
-        # Update games for last 7 days
-        fetcher.update_games(days_back=7)
+    fetcher = MLBDataFetcher()
+    fetcher.create_tables()
+    
+    # Get today's games
+    games = fetcher.get_today_games()
+    
+    if games:
+        # Store games in database
+        cursor = fetcher.conn.cursor()
         
-        # Also fetch today's games (for upcoming predictions)
-        today_games = fetcher.get_today_games()
-        if today_games:
-            logger.info(f"Found {len(today_games.get('dates', []))} game dates for today")
+        for game in games:
+            # Insert or update game data
+            cursor.execute("""
+                INSERT OR REPLACE INTO games (
+                    game_id, game_date, season, home_team_name, away_team_name,
+                    home_pitcher, away_pitcher, status
+                ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+            """, (
+                game['game_id'], game['game_date'], game['season'],
+                game['home_team_name'], game['away_team_name'],
+                game['home_pitcher'], game['away_pitcher'], game['status']            ))
         
-    except Exception as e:
-        logger.error(f"Error in main: {e}")
-    finally:
-        fetcher.close()
+        fetcher.conn.commit()
+        print(f"Stored {len(games)} real games in database")
+        
+        # Show what we got
+        print("\nTODAY'S MLB GAMES:")
+        for game in games:
+            print(f"  {game['away_team_name']} @ {game['home_team_name']}")
+            print(f"     Pitchers: {game['away_pitcher']} vs {game['home_pitcher']}")
+            print(f"     Status: {game['status']}")
+            print()
+    else:
+        print("No games found for today")
+    
+    fetcher.conn.close()
+    print("Database updated with real MLB data!")
 
 if __name__ == "__main__":
     main()

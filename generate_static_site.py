@@ -469,13 +469,13 @@ def generate_historical_json():
 
 def main():
     """Main function to generate static site"""
-    print("🏗️  Generating MLB YRFI/NRFI Dashboard...")
+    print("Generating MLB YRFI/NRFI Dashboard...")
     
     # Create docs directory
     docs_dir = 'docs'
     if not os.path.exists(docs_dir):
         os.makedirs(docs_dir)
-        print(f"📁 Created {docs_dir}/ directory")
+        print(f"Created {docs_dir}/ directory")
     
     # Initialize predictor and get predictions
     predictor = MLBPredictor()
@@ -488,21 +488,21 @@ def main():
     html_path = os.path.join(docs_dir, 'index.html')
     with open(html_path, 'w', encoding='utf-8') as f:
         f.write(html_content)
-    print(f"📄 Generated {html_path}")
+    print(f"Generated {html_path}")
     
     # Generate data JSON
     data_json = generate_data_json(predictions)
     data_path = os.path.join(docs_dir, 'data.json')
     with open(data_path, 'w', encoding='utf-8') as f:
         f.write(data_json)
-    print(f"📊 Generated {data_path}")
+    print(f"Generated {data_path}")
     
     # Generate historical JSON
     historical_json = generate_historical_json()
     historical_path = os.path.join(docs_dir, 'historical.json')
     with open(historical_path, 'w', encoding='utf-8') as f:
         f.write(historical_json)
-    print(f"📈 Generated {historical_path}")
+    print(f"Generated {historical_path}")
     
     # Create README for docs folder
     readme_content = f"""# MLB YRFI/NRFI Predictions Dashboard
@@ -538,11 +538,11 @@ The live dashboard is available at: https://digitalgrowthguy.github.io/mlb-whop-
     readme_path = os.path.join(docs_dir, 'README.md')
     with open(readme_path, 'w', encoding='utf-8') as f:
         f.write(readme_content)
-    print(f"📝 Generated {readme_path}")
+    print(f"Generated {readme_path}")
     
-    print("✅ Static site generated in 'docs/' folder")
-    print(f"📊 Generated data for {len(predictions)} games")
-    print(f"🕒 Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print("Static site generated in 'docs/' folder")
+    print(f"Generated data for {len(predictions)} games")
+    print(f"Last updated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
 
 if __name__ == "__main__":
     main()
