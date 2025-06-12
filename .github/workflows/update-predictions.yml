@@ -16,11 +16,11 @@ permissions:
 jobs:
   update-predictions:
     runs-on: ubuntu-latest
-    
-    steps:
+      steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
+        token: ${{ secrets.GITHUB_TOKEN }}
         fetch-depth: 0
     
     - name: Set up Python
@@ -45,8 +45,7 @@ jobs:
         python generate_static_site.py
       env:
         PYTHONIOENCODING: utf-8
-    
-    - name: Commit and push changes
+      - name: Commit and push changes
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action Bot"
@@ -59,8 +58,10 @@ jobs:
           echo "No changes to commit"
         else
           git commit -m "🤖 Auto-update MLB predictions for $(date +'%Y-%m-%d %H:%M UTC')"
-          git push origin main
+          git push
           echo "Changes committed and pushed successfully"
         fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   # GitHub Pages deployment happens automatically when pushing to main
   # since we're using the 'Deploy from a branch' setting

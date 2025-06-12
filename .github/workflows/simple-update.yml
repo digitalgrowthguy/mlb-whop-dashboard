@@ -1,0 +1,52 @@
+name: Simple Daily Update
+
+on:
+  schedule:
+    # Run daily at 6 AM EST (11:00 UTC)
+    - cron: '0 11 * * *'
+  workflow_dispatch:
+
+# Give GITHUB_TOKEN write permissions
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        # Use personal access token for write access
+        token: ${{ secrets.GITHUB_TOKEN }}
+    
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Fetch MLB data
+      run: python fetch_mlb_data.py
+      env:
+        PYTHONIOENCODING: utf-8
+    
+    - name: Generate dashboard
+      run: python generate_static_site.py
+      env:
+        PYTHONIOENCODING: utf-8
+    
+    - name: Auto-commit and push
+      uses: stefanzweifel/git-auto-commit-action@v5
+      with:
+        commit_message: '🤖 Auto-update predictions for ${{ github.run_id }}'
+        branch: main
+        commit_user_name: MLB-Bot
+        commit_user_email: action@github.com
+        commit_author: MLB Prediction Bot <action@github.com>
