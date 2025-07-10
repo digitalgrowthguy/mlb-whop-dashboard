@@ -1,22 +1,53 @@
 {
-  "date": "2025-07-09",
-  "last_updated": "11:11:32 EST",
-  "total_games": 15,
-  "betting_games": 12,
-  "yrfi_count": 5,
-  "nrfi_count": 7,
+  "date": "2025-07-10",
+  "last_updated": "11:11:41 EST",
+  "total_games": 11,
+  "betting_games": 8,
+  "yrfi_count": 4,
+  "nrfi_count": 4,
   "predictions": [
     {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.42751861042183625,
+      "nrfi_probability": 0.5724813895781637,
+      "confidence": 0.36240694789081873,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 90,
+      "quality_details": [
+        "Home pitcher: 13 games",
+        "Away pitcher: 4 games (limited)",
+        "Home team: 65 games",
+        "Away team: 62 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Athletics",
+        "away_team": "Atlanta Braves",
+        "home_pitcher": "JP Sears",
+        "away_pitcher": "Spencer Strider"
+      },
+      "game_date": "2025-07-10",
+      "home_team": "Athletics",
+      "away_team": "Atlanta Braves",
+      "home_pitcher": "JP Sears",
+      "away_pitcher": "Spencer Strider",
+      "grade": "C+",
+      "grade_description": "Fair",
+      "grade_color": "#FB8C00",
+      "grade_detail": "Moderate confidence"
+    },
+    {
       "prediction": "YRFI",
-      "yrfi_probability": 0.5295285359801489,
-      "nrfi_probability": 0.47047146401985107,
-      "confidence": 0.14764267990074464,
-      "should_bet": false,
+      "yrfi_probability": 0.5449131513647643,
+      "nrfi_probability": 0.45508684863523574,
+      "confidence": 0.2245657568238213,
+      "should_bet": true,
       "data_quality": "excellent",
       "quality_score": 100,
       "quality_details": [
         "Home pitcher: 13 games",
-        "Away pitcher: 13 games",
+        "Away pitcher: 9 games",
         "Home team: 62 games",
         "Away team: 62 games"
       ],
@@ -24,61 +55,30 @@
       "details": {
         "home_team": "San Diego Padres",
         "away_team": "Arizona Diamondbacks",
-        "home_pitcher": "Dylan Cease",
-        "away_pitcher": "Brandon Pfaadt"
+        "home_pitcher": "Randy V\u00e1squez",
+        "away_pitcher": "Eduardo Rodriguez"
       },
-      "game_date": "2025-07-09",
+      "game_date": "2025-07-10",
       "home_team": "San Diego Padres",
       "away_team": "Arizona Diamondbacks",
-      "home_pitcher": "Dylan Cease",
-      "away_pitcher": "Brandon Pfaadt",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
+      "home_pitcher": "Randy V\u00e1squez",
+      "away_pitcher": "Eduardo Rodriguez",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4619169719169719,
-      "nrfi_probability": 0.5380830280830281,
-      "confidence": 0.19041514041514052,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 10 games",
-        "Away pitcher: 13 games",
-        "Home team: 63 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "San Francisco Giants",
-        "away_team": "Philadelphia Phillies",
-        "home_pitcher": "Justin Verlander",
-        "away_pitcher": "Jes\u00fas Luzardo"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "San Francisco Giants",
-      "away_team": "Philadelphia Phillies",
-      "home_pitcher": "Justin Verlander",
-      "away_pitcher": "Jes\u00fas Luzardo",
-      "grade": "D",
-      "grade_description": "Risky",
-      "grade_color": "#FF5722",
-      "grade_detail": "Low confidence - risky"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5659274193548387,
-      "nrfi_probability": 0.4340725806451613,
-      "confidence": 0.3296370967741935,
+      "yrfi_probability": 0.4227456011730205,
+      "nrfi_probability": 0.5772543988269795,
+      "confidence": 0.38627199413489743,
       "should_bet": true,
       "data_quality": "excellent",
       "quality_score": 100,
       "quality_details": [
         "Home pitcher: 12 games",
-        "Away pitcher: 6 games",
+        "Away pitcher: 11 games",
         "Home team: 62 games",
         "Away team: 64 games"
       ],
@@ -86,14 +86,14 @@
       "details": {
         "home_team": "Los Angeles Angels",
         "away_team": "Texas Rangers",
-        "home_pitcher": "Kyle Hendricks",
-        "away_pitcher": "Kumar Rocker"
+        "home_pitcher": "Jack Kochanowicz",
+        "away_pitcher": "Patrick Corbin"
       },
-      "game_date": "2025-07-09",
+      "game_date": "2025-07-10",
       "home_team": "Los Angeles Angels",
       "away_team": "Texas Rangers",
-      "home_pitcher": "Kyle Hendricks",
-      "away_pitcher": "Kumar Rocker",
+      "home_pitcher": "Jack Kochanowicz",
+      "away_pitcher": "Patrick Corbin",
       "grade": "C+",
       "grade_description": "Fair",
       "grade_color": "#FB8C00",
@@ -101,154 +101,30 @@
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.3646491491220144,
-      "nrfi_probability": 0.6353508508779856,
-      "confidence": 0.5914034035119424,
+      "yrfi_probability": 0.43478005865102637,
+      "nrfi_probability": 0.5652199413489736,
+      "confidence": 0.32609970674486816,
       "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 65,
+      "data_quality": "excellent",
+      "quality_score": 100,
       "quality_details": [
-        "Home pitcher: 3 games (limited)",
-        "Away pitcher: insufficient data",
+        "Home pitcher: 11 games",
+        "Away pitcher: 10 games",
         "Home team: 62 games",
-        "Away team: 63 games"
+        "Away team: 62 games"
       ],
-      "min_confidence_required": 0.12,
+      "min_confidence_required": 0.15,
       "details": {
         "home_team": "Chicago White Sox",
-        "away_team": "Toronto Blue Jays",
-        "home_pitcher": "Adrian Houser",
-        "away_pitcher": "Eric Lauer"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Chicago White Sox",
-      "away_team": "Toronto Blue Jays",
-      "home_pitcher": "Adrian Houser",
-      "away_pitcher": "Eric Lauer",
-      "grade": "B+",
-      "grade_description": "Strong",
-      "grade_color": "#388E3C",
-      "grade_detail": "High confidence"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5113723955579058,
-      "nrfi_probability": 0.4886276044420942,
-      "confidence": 0.04548958223162325,
-      "should_bet": false,
-      "data_quality": "good",
-      "quality_score": 80,
-      "quality_details": [
-        "Home pitcher: 4 games (limited)",
-        "Away pitcher: 4 games (limited)",
-        "Home team: 62 games",
-        "Away team: 61 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Minnesota Twins",
-        "away_team": "Chicago Cubs",
-        "home_pitcher": "David Festa",
-        "away_pitcher": "Cade Horton"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Minnesota Twins",
-      "away_team": "Chicago Cubs",
-      "home_pitcher": "David Festa",
-      "away_pitcher": "Cade Horton",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
-    },
-    {
-      "prediction": "NRFI",
-      "yrfi_probability": 0.38213055028462994,
-      "nrfi_probability": 0.6178694497153701,
-      "confidence": 0.5214777988614803,
-      "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 65,
-      "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 4 games (limited)",
-        "Home team: 62 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Houston Astros",
         "away_team": "Cleveland Guardians",
-        "home_pitcher": "Brandon Walter",
-        "away_pitcher": "Slade Cecconi"
+        "home_pitcher": "Jonathan Cannon",
+        "away_pitcher": "Logan Allen"
       },
-      "game_date": "2025-07-09",
-      "home_team": "Houston Astros",
+      "game_date": "2025-07-10",
+      "home_team": "Chicago White Sox",
       "away_team": "Cleveland Guardians",
-      "home_pitcher": "Brandon Walter",
-      "away_pitcher": "Slade Cecconi",
-      "grade": "B+",
-      "grade_description": "Strong",
-      "grade_color": "#388E3C",
-      "grade_detail": "High confidence"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5707834101382488,
-      "nrfi_probability": 0.42921658986175115,
-      "confidence": 0.35391705069124424,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 7 games",
-        "Away pitcher: 5 games",
-        "Home team: 64 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Milwaukee Brewers",
-        "away_team": "Los Angeles Dodgers",
-        "home_pitcher": "Jose Quintana",
-        "away_pitcher": "Tyler Glasnow"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Milwaukee Brewers",
-      "away_team": "Los Angeles Dodgers",
-      "home_pitcher": "Jose Quintana",
-      "away_pitcher": "Tyler Glasnow",
-      "grade": "C+",
-      "grade_description": "Fair",
-      "grade_color": "#FB8C00",
-      "grade_detail": "Moderate confidence"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5814552230817887,
-      "nrfi_probability": 0.41854477691821135,
-      "confidence": 0.3258208923271546,
-      "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 75,
-      "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 9 games",
-        "Home team: 65 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Athletics",
-        "away_team": "Atlanta Braves",
-        "home_pitcher": "Mitch Spence",
-        "away_pitcher": "Bryce Elder"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Athletics",
-      "away_team": "Atlanta Braves",
-      "home_pitcher": "Mitch Spence",
-      "away_pitcher": "Bryce Elder",
+      "home_pitcher": "Jonathan Cannon",
+      "away_pitcher": "Logan Allen",
       "grade": "C+",
       "grade_description": "Fair",
       "grade_color": "#FB8C00",
@@ -256,107 +132,14 @@
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4197115384615385,
-      "nrfi_probability": 0.5802884615384615,
-      "confidence": 0.4014423076923074,
+      "yrfi_probability": 0.3655241935483871,
+      "nrfi_probability": 0.634475806451613,
+      "confidence": 0.7223790322580645,
       "should_bet": true,
       "data_quality": "excellent",
       "quality_score": 100,
       "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: 13 games",
-        "Home team: 64 games",
-        "Away team: 64 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Kansas City Royals",
-        "away_team": "Pittsburgh Pirates",
-        "home_pitcher": "Kris Bubic",
-        "away_pitcher": "Bailey Falter"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Kansas City Royals",
-      "away_team": "Pittsburgh Pirates",
-      "home_pitcher": "Kris Bubic",
-      "away_pitcher": "Bailey Falter",
-      "grade": "B",
-      "grade_description": "Good",
-      "grade_color": "#FFA726",
-      "grade_detail": "Good confidence"
-    },
-    {
-      "prediction": "NRFI",
-      "yrfi_probability": 0.3787545787545788,
-      "nrfi_probability": 0.6212454212454213,
-      "confidence": 0.6562271062271061,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: 13 games",
-        "Home team: 63 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "St. Louis Cardinals",
-        "away_team": "Washington Nationals",
-        "home_pitcher": "Andre Pallante",
-        "away_pitcher": "MacKenzie Gore"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "St. Louis Cardinals",
-      "away_team": "Washington Nationals",
-      "home_pitcher": "Andre Pallante",
-      "away_pitcher": "MacKenzie Gore",
-      "grade": "A",
-      "grade_description": "Excellent",
-      "grade_color": "#2E7D32",
-      "grade_detail": "Very high confidence"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.6112637362637363,
-      "nrfi_probability": 0.3887362637362637,
-      "confidence": 0.6063186813186816,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 7 games",
-        "Away pitcher: 12 games",
-        "Home team: 65 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Boston Red Sox",
-        "away_team": "Colorado Rockies",
-        "home_pitcher": "Lucas Giolito",
-        "away_pitcher": "Antonio Senzatela"
-      },
-      "game_date": "2025-07-09",
-      "home_team": "Boston Red Sox",
-      "away_team": "Colorado Rockies",
-      "home_pitcher": "Lucas Giolito",
-      "away_pitcher": "Antonio Senzatela",
-      "grade": "A",
-      "grade_description": "Excellent",
-      "grade_color": "#2E7D32",
-      "grade_detail": "Very high confidence"
-    },
-    {
-      "prediction": "NRFI",
-      "yrfi_probability": 0.4280241935483871,
-      "nrfi_probability": 0.571975806451613,
-      "confidence": 0.35987903225806445,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 12 games",
+        "Home pitcher: 8 games",
         "Away pitcher: 12 games",
         "Home team: 62 games",
         "Away team: 64 games"
@@ -365,60 +148,91 @@
       "details": {
         "home_team": "Baltimore Orioles",
         "away_team": "New York Mets",
-        "home_pitcher": "Tomoyuki Sugano",
+        "home_pitcher": "Charlie Morton",
         "away_pitcher": "David Peterson"
       },
-      "game_date": "2025-07-09",
+      "game_date": "2025-07-10",
       "home_team": "Baltimore Orioles",
       "away_team": "New York Mets",
-      "home_pitcher": "Tomoyuki Sugano",
+      "home_pitcher": "Charlie Morton",
       "away_pitcher": "David Peterson",
-      "grade": "C+",
-      "grade_description": "Fair",
-      "grade_color": "#FB8C00",
-      "grade_detail": "Moderate confidence"
+      "grade": "A+",
+      "grade_description": "Elite",
+      "grade_color": "#00C851",
+      "grade_detail": "Highest confidence - Premium bet"
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4720390720390721,
-      "nrfi_probability": 0.5279609279609279,
-      "confidence": 0.13980463980463959,
+      "yrfi_probability": 0.487412464144352,
+      "nrfi_probability": 0.512587535855648,
+      "confidence": 0.0629376792782399,
       "should_bet": false,
       "data_quality": "excellent",
       "quality_score": 100,
       "quality_details": [
-        "Home pitcher: 9 games",
-        "Away pitcher: 13 games",
-        "Home team: 65 games",
-        "Away team: 63 games"
+        "Home pitcher: 11 games",
+        "Away pitcher: 9 games",
+        "Home team: 62 games",
+        "Away team: 61 games"
       ],
       "min_confidence_required": 0.15,
       "details": {
-        "home_team": "Detroit Tigers",
-        "away_team": "Tampa Bay Rays",
-        "home_pitcher": "Reese Olson",
-        "away_pitcher": "Zack Littell"
+        "home_team": "Minnesota Twins",
+        "away_team": "Chicago Cubs",
+        "home_pitcher": "Chris Paddack",
+        "away_pitcher": "Colin Rea"
       },
-      "game_date": "2025-07-09",
-      "home_team": "Detroit Tigers",
-      "away_team": "Tampa Bay Rays",
-      "home_pitcher": "Reese Olson",
-      "away_pitcher": "Zack Littell",
+      "game_date": "2025-07-10",
+      "home_team": "Minnesota Twins",
+      "away_team": "Chicago Cubs",
+      "home_pitcher": "Chris Paddack",
+      "away_pitcher": "Colin Rea",
       "grade": "N/A",
       "grade_description": "No Bet",
       "grade_color": "#666",
       "grade_detail": "Insufficient confidence"
     },
     {
-      "prediction": "NRFI",
-      "yrfi_probability": 0.41177335415040334,
-      "nrfi_probability": 0.5882266458495966,
-      "confidence": 0.4411332292479833,
+      "prediction": "YRFI",
+      "yrfi_probability": 0.5380952380952381,
+      "nrfi_probability": 0.46190476190476193,
+      "confidence": 0.19047619047619035,
       "should_bet": true,
       "data_quality": "excellent",
       "quality_score": 100,
       "quality_details": [
-        "Home pitcher: 10 games",
+        "Home pitcher: 12 games",
+        "Away pitcher: 7 games",
+        "Home team: 63 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "St. Louis Cardinals",
+        "away_team": "Washington Nationals",
+        "home_pitcher": "Miles Mikolas",
+        "away_pitcher": "Michael Soroka"
+      },
+      "game_date": "2025-07-10",
+      "home_team": "St. Louis Cardinals",
+      "away_team": "Washington Nationals",
+      "home_pitcher": "Miles Mikolas",
+      "away_pitcher": "Michael Soroka",
+      "grade": "D",
+      "grade_description": "Risky",
+      "grade_color": "#FF5722",
+      "grade_detail": "Low confidence - risky"
+    },
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.47177335415040333,
+      "nrfi_probability": 0.5282266458495967,
+      "confidence": 0.14113322924798333,
+      "should_bet": false,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 12 games",
         "Away pitcher: 12 games",
         "Home team: 63 games",
         "Away team: 61 games"
@@ -427,18 +241,18 @@
       "details": {
         "home_team": "Cincinnati Reds",
         "away_team": "Miami Marlins",
-        "home_pitcher": "Andrew Abbott",
-        "away_pitcher": "Sandy Alcantara"
+        "home_pitcher": "Nick Lodolo",
+        "away_pitcher": "Cal Quantrill"
       },
-      "game_date": "2025-07-09",
+      "game_date": "2025-07-10",
       "home_team": "Cincinnati Reds",
       "away_team": "Miami Marlins",
-      "home_pitcher": "Andrew Abbott",
-      "away_pitcher": "Sandy Alcantara",
-      "grade": "B",
-      "grade_description": "Good",
-      "grade_color": "#FFA726",
-      "grade_detail": "Good confidence"
+      "home_pitcher": "Nick Lodolo",
+      "away_pitcher": "Cal Quantrill",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
     },
     {
       "prediction": "YRFI",
@@ -450,7 +264,7 @@
       "quality_score": 75,
       "quality_details": [
         "Home pitcher: insufficient data",
-        "Away pitcher: 6 games",
+        "Away pitcher: 12 games",
         "Home team: 61 games",
         "Away team: 62 games"
       ],
@@ -458,18 +272,80 @@
       "details": {
         "home_team": "New York Yankees",
         "away_team": "Seattle Mariners",
-        "home_pitcher": "Cam Schlittler",
-        "away_pitcher": "Logan Evans"
+        "home_pitcher": "Marcus Stroman",
+        "away_pitcher": "Bryan Woo"
       },
-      "game_date": "2025-07-09",
+      "game_date": "2025-07-10",
       "home_team": "New York Yankees",
       "away_team": "Seattle Mariners",
-      "home_pitcher": "Cam Schlittler",
-      "away_pitcher": "Logan Evans",
+      "home_pitcher": "Marcus Stroman",
+      "away_pitcher": "Bryan Woo",
       "grade": "C",
       "grade_description": "Decent",
       "grade_color": "#F57C00",
       "grade_detail": "Lower confidence"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.6756288156288157,
+      "nrfi_probability": 0.3243711843711843,
+      "confidence": 0.95,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 10 games",
+        "Away pitcher: 12 games",
+        "Home team: 65 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Boston Red Sox",
+        "away_team": "Tampa Bay Rays",
+        "home_pitcher": "Walker Buehler",
+        "away_pitcher": "Taj Bradley"
+      },
+      "game_date": "2025-07-10",
+      "home_team": "Boston Red Sox",
+      "away_team": "Tampa Bay Rays",
+      "home_pitcher": "Walker Buehler",
+      "away_pitcher": "Taj Bradley",
+      "grade": "A+",
+      "grade_description": "Elite",
+      "grade_color": "#00C851",
+      "grade_detail": "Highest confidence - Premium bet"
+    },
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4980698292220115,
+      "nrfi_probability": 0.5019301707779885,
+      "confidence": 0.007720683111954063,
+      "should_bet": false,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: insufficient data",
+        "Home team: 62 games",
+        "Away team: 64 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Baltimore Orioles",
+        "away_team": "New York Mets",
+        "home_pitcher": "Tomoyuki Sugano",
+        "away_pitcher": "Unknown"
+      },
+      "game_date": "2025-07-10",
+      "home_team": "Baltimore Orioles",
+      "away_team": "New York Mets",
+      "home_pitcher": "Tomoyuki Sugano",
+      "away_pitcher": "Unknown",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
     }
   ]
 }
