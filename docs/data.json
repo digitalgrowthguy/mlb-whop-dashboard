@@ -1,9 +1,41 @@
 {
-  "date": "2025-07-14",
-  "last_updated": "11:02:34 EST",
-  "total_games": 0,
-  "betting_games": 0,
+  "date": "2025-07-15",
+  "last_updated": "11:02:32 EST",
+  "total_games": 1,
+  "betting_games": 1,
   "yrfi_count": 0,
-  "nrfi_count": 0,
-  "predictions": []
+  "nrfi_count": 1,
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.3884538461538462,
+      "nrfi_probability": 0.6115461538461537,
+      "confidence": 0.3846384615384614,
+      "should_bet": true,
+      "data_quality": "fair",
+      "quality_score": 50,
+      "quality_details": [
+        "Home pitcher: 13 games",
+        "Away pitcher: 13 games",
+        "Home team: insufficient data",
+        "Away team: insufficient data"
+      ],
+      "min_confidence_required": 0.1,
+      "details": {
+        "home_team": "National League All-Stars",
+        "away_team": "American League All-Stars",
+        "home_pitcher": "Paul Skenes",
+        "away_pitcher": "Tarik Skubal"
+      },
+      "game_date": "2025-07-15",
+      "home_team": "National League All-Stars",
+      "away_team": "American League All-Stars",
+      "home_pitcher": "Paul Skenes",
+      "away_pitcher": "Tarik Skubal",
+      "grade": "C+",
+      "grade_description": "Fair",
+      "grade_color": "#FB8C00",
+      "grade_detail": "Moderate confidence"
+    }
+  ]
 }
