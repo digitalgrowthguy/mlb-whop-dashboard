@@ -1,9 +1,134 @@
 {
-  "date": "2025-09-29",
-  "last_updated": "11:02:44 EST",
-  "total_games": 0,
-  "betting_games": 0,
+  "date": "2025-09-30",
+  "last_updated": "11:02:40 EST",
+  "total_games": 4,
+  "betting_games": 3,
   "yrfi_count": 0,
-  "nrfi_count": 0,
-  "predictions": []
+  "nrfi_count": 3,
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.420134849286092,
+      "nrfi_probability": 0.579865150713908,
+      "confidence": 0.3993257535695399,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: 12 games",
+        "Home team: 61 games",
+        "Away team: 62 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Chicago Cubs",
+        "away_team": "San Diego Padres",
+        "home_pitcher": "Matthew Boyd",
+        "away_pitcher": "Nick Pivetta"
+      },
+      "game_date": "2025-09-30",
+      "home_team": "Chicago Cubs",
+      "away_team": "San Diego Padres",
+      "home_pitcher": "Matthew Boyd",
+      "away_pitcher": "Nick Pivetta",
+      "grade": "C+",
+      "grade_description": "Fair",
+      "grade_color": "#FB8C00",
+      "grade_detail": "Moderate confidence"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.5247801418905783,
+      "nrfi_probability": 0.4752198581094217,
+      "confidence": 0.09912056756231324,
+      "should_bet": false,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: insufficient data",
+        "Away pitcher: 11 games",
+        "Home team: 62 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Los Angeles Dodgers",
+        "away_team": "Cincinnati Reds",
+        "home_pitcher": "Blake Snell",
+        "away_pitcher": "Hunter Greene"
+      },
+      "game_date": "2025-09-30",
+      "home_team": "Los Angeles Dodgers",
+      "away_team": "Cincinnati Reds",
+      "home_pitcher": "Blake Snell",
+      "away_pitcher": "Hunter Greene",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
+    },
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.3838089330024814,
+      "nrfi_probability": 0.6161910669975186,
+      "confidence": 0.6309553349875929,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: 13 games",
+        "Home team: 62 games",
+        "Away team: 65 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Cleveland Guardians",
+        "away_team": "Detroit Tigers",
+        "home_pitcher": "Gavin Williams",
+        "away_pitcher": "Tarik Skubal"
+      },
+      "game_date": "2025-09-30",
+      "home_team": "Cleveland Guardians",
+      "away_team": "Detroit Tigers",
+      "home_pitcher": "Gavin Williams",
+      "away_pitcher": "Tarik Skubal",
+      "grade": "A",
+      "grade_description": "Excellent",
+      "grade_color": "#2E7D32",
+      "grade_detail": "Very high confidence"
+    },
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4631778058007566,
+      "nrfi_probability": 0.5368221941992434,
+      "confidence": 0.18411097099621687,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 13 games",
+        "Away pitcher: 13 games",
+        "Home team: 61 games",
+        "Away team: 65 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "New York Yankees",
+        "away_team": "Boston Red Sox",
+        "home_pitcher": "Max Fried",
+        "away_pitcher": "Garrett Crochet"
+      },
+      "game_date": "2025-09-30",
+      "home_team": "New York Yankees",
+      "away_team": "Boston Red Sox",
+      "home_pitcher": "Max Fried",
+      "away_pitcher": "Garrett Crochet",
+      "grade": "D",
+      "grade_description": "Risky",
+      "grade_color": "#FF5722",
+      "grade_detail": "Low confidence - risky"
+    }
+  ]
 }
