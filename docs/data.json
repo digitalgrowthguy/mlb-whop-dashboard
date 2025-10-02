@@ -1,22 +1,22 @@
 {
-  "date": "2025-10-01",
-  "last_updated": "11:02:43 EST",
-  "total_games": 4,
+  "date": "2025-10-02",
+  "last_updated": "11:02:29 EST",
+  "total_games": 3,
   "betting_games": 2,
   "yrfi_count": 0,
   "nrfi_count": 2,
   "predictions": [
     {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5015042925407562,
-      "nrfi_probability": 0.49849570745924376,
-      "confidence": 0.006017170163024943,
-      "should_bet": false,
+      "prediction": "NRFI",
+      "yrfi_probability": 0.46711515226926315,
+      "nrfi_probability": 0.5328848477307369,
+      "confidence": 0.13153939092294742,
+      "should_bet": true,
       "data_quality": "good",
       "quality_score": 75,
       "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 13 games",
+        "Home pitcher: 12 games",
+        "Away pitcher: insufficient data",
         "Home team: 61 games",
         "Away team: 62 games"
       ],
@@ -24,92 +24,61 @@
       "details": {
         "home_team": "Chicago Cubs",
         "away_team": "San Diego Padres",
-        "home_pitcher": "Andrew Kittredge",
-        "away_pitcher": "Dylan Cease"
+        "home_pitcher": "Jameson Taillon",
+        "away_pitcher": "Yu Darvish"
       },
-      "game_date": "2025-10-01",
+      "game_date": "2025-10-02",
       "home_team": "Chicago Cubs",
       "away_team": "San Diego Padres",
-      "home_pitcher": "Andrew Kittredge",
-      "away_pitcher": "Dylan Cease",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.519865439220278,
-      "nrfi_probability": 0.48013456077972205,
-      "confidence": 0.09932719610138974,
-      "should_bet": false,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 11 games",
-        "Away pitcher: 13 games",
-        "Home team: 62 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Los Angeles Dodgers",
-        "away_team": "Cincinnati Reds",
-        "home_pitcher": "Yoshinobu Yamamoto",
-        "away_pitcher": "Zack Littell"
-      },
-      "game_date": "2025-10-01",
-      "home_team": "Los Angeles Dodgers",
-      "away_team": "Cincinnati Reds",
-      "home_pitcher": "Yoshinobu Yamamoto",
-      "away_pitcher": "Zack Littell",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
+      "home_pitcher": "Jameson Taillon",
+      "away_pitcher": "Yu Darvish",
+      "grade": "F",
+      "grade_description": "Avoid",
+      "grade_color": "#D32F2F",
+      "grade_detail": "Very low confidence"
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4580496006725515,
-      "nrfi_probability": 0.5419503993274485,
-      "confidence": 0.20975199663724242,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
+      "yrfi_probability": 0.498798558818231,
+      "nrfi_probability": 0.501201441181769,
+      "confidence": 0.003604323545307042,
+      "should_bet": false,
+      "data_quality": "fair",
+      "quality_score": 50,
       "quality_details": [
-        "Home pitcher: 13 games",
-        "Away pitcher: 9 games",
+        "Home pitcher: insufficient data",
+        "Away pitcher: insufficient data",
         "Home team: 61 games",
         "Away team: 65 games"
       ],
-      "min_confidence_required": 0.15,
+      "min_confidence_required": 0.1,
       "details": {
         "home_team": "New York Yankees",
         "away_team": "Boston Red Sox",
-        "home_pitcher": "Carlos Rod\u00f3n",
-        "away_pitcher": "Brayan Bello"
+        "home_pitcher": "Cam Schlittler",
+        "away_pitcher": "Connelly Early"
       },
-      "game_date": "2025-10-01",
+      "game_date": "2025-10-02",
       "home_team": "New York Yankees",
       "away_team": "Boston Red Sox",
-      "home_pitcher": "Carlos Rod\u00f3n",
-      "away_pitcher": "Brayan Bello",
-      "grade": "C",
-      "grade_description": "Decent",
-      "grade_color": "#F57C00",
-      "grade_detail": "Lower confidence"
+      "home_pitcher": "Cam Schlittler",
+      "away_pitcher": "Connelly Early",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
     },
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.3915012406947891,
-      "nrfi_probability": 0.6084987593052109,
-      "confidence": 0.5924937965260546,
+      "yrfi_probability": 0.3415012406947891,
+      "nrfi_probability": 0.658498759305211,
+      "confidence": 0.8924937965260545,
       "should_bet": true,
       "data_quality": "excellent",
-      "quality_score": 100,
+      "quality_score": 90,
       "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: 10 games",
+        "Home pitcher: 4 games (limited)",
+        "Away pitcher: 12 games",
         "Home team: 62 games",
         "Away team: 65 games"
       ],
@@ -117,18 +86,18 @@
       "details": {
         "home_team": "Cleveland Guardians",
         "away_team": "Detroit Tigers",
-        "home_pitcher": "Tanner Bibee",
-        "away_pitcher": "Casey Mize"
+        "home_pitcher": "Slade Cecconi",
+        "away_pitcher": "Jack Flaherty"
       },
-      "game_date": "2025-10-01",
+      "game_date": "2025-10-02",
       "home_team": "Cleveland Guardians",
       "away_team": "Detroit Tigers",
-      "home_pitcher": "Tanner Bibee",
-      "away_pitcher": "Casey Mize",
-      "grade": "B+",
-      "grade_description": "Strong",
-      "grade_color": "#388E3C",
-      "grade_detail": "High confidence"
+      "home_pitcher": "Slade Cecconi",
+      "away_pitcher": "Jack Flaherty",
+      "grade": "A+",
+      "grade_description": "Elite",
+      "grade_color": "#00C851",
+      "grade_detail": "Highest confidence - Premium bet"
     }
   ]
 }
