@@ -1,9 +1,134 @@
 {
-  "date": "2025-10-03",
-  "last_updated": "11:02:34 EST",
-  "total_games": 0,
-  "betting_games": 0,
-  "yrfi_count": 0,
-  "nrfi_count": 0,
-  "predictions": []
+  "date": "2025-10-04",
+  "last_updated": "11:02:20 EST",
+  "total_games": 4,
+  "betting_games": 4,
+  "yrfi_count": 3,
+  "nrfi_count": 1,
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4137452711223203,
+      "nrfi_probability": 0.5862547288776797,
+      "confidence": 0.43127364438839855,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 13 games",
+        "Away pitcher: 12 games",
+        "Home team: 64 games",
+        "Away team: 61 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Milwaukee Brewers",
+        "away_team": "Chicago Cubs",
+        "home_pitcher": "Freddy Peralta",
+        "away_pitcher": "Matthew Boyd"
+      },
+      "game_date": "2025-10-04",
+      "home_team": "Milwaukee Brewers",
+      "away_team": "Chicago Cubs",
+      "home_pitcher": "Freddy Peralta",
+      "away_pitcher": "Matthew Boyd",
+      "grade": "B",
+      "grade_description": "Good",
+      "grade_color": "#FFA726",
+      "grade_detail": "Good confidence"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.5590047408210597,
+      "nrfi_probability": 0.44099525917894034,
+      "confidence": 0.23601896328423866,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 62 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Philadelphia Phillies",
+        "away_team": "Los Angeles Dodgers",
+        "home_pitcher": "Cristopher S\u00e1nchez",
+        "away_pitcher": "Shohei Ohtani"
+      },
+      "game_date": "2025-10-04",
+      "home_team": "Philadelphia Phillies",
+      "away_team": "Los Angeles Dodgers",
+      "home_pitcher": "Cristopher S\u00e1nchez",
+      "away_pitcher": "Shohei Ohtani",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.544150693329441,
+      "nrfi_probability": 0.455849306670559,
+      "confidence": 0.17660277331776397,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 65,
+      "quality_details": [
+        "Home pitcher: 3 games (limited)",
+        "Away pitcher: insufficient data",
+        "Home team: 62 games",
+        "Away team: 65 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Seattle Mariners",
+        "away_team": "Detroit Tigers",
+        "home_pitcher": "George Kirby",
+        "away_pitcher": "Troy Melton"
+      },
+      "game_date": "2025-10-04",
+      "home_team": "Seattle Mariners",
+      "away_team": "Detroit Tigers",
+      "home_pitcher": "George Kirby",
+      "away_pitcher": "Troy Melton",
+      "grade": "D",
+      "grade_description": "Risky",
+      "grade_color": "#FF5722",
+      "grade_detail": "Low confidence - risky"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.568848607858444,
+      "nrfi_probability": 0.43115139214155596,
+      "confidence": 0.2753944314337762,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 61 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Toronto Blue Jays",
+        "away_team": "New York Yankees",
+        "home_pitcher": "Kevin Gausman",
+        "away_pitcher": "Luis Gil"
+      },
+      "game_date": "2025-10-04",
+      "home_team": "Toronto Blue Jays",
+      "away_team": "New York Yankees",
+      "home_pitcher": "Kevin Gausman",
+      "away_pitcher": "Luis Gil",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
+    }
+  ]
 }
