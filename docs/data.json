@@ -1,6 +1,6 @@
 {
-  "date": "2025-10-10",
-  "last_updated": "11:02:36 EST",
+  "date": "2025-10-11",
+  "last_updated": "11:02:23 EST",
   "total_games": 1,
   "betting_games": 0,
   "yrfi_count": 0,
@@ -8,30 +8,30 @@
   "predictions": [
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4942928039702233,
-      "nrfi_probability": 0.5057071960297768,
-      "confidence": 0.028535980148883533,
+      "yrfi_probability": 0.48939484777517567,
+      "nrfi_probability": 0.5106051522248243,
+      "confidence": 0.031815456674473,
       "should_bet": false,
-      "data_quality": "excellent",
-      "quality_score": 90,
+      "data_quality": "fair",
+      "quality_score": 50,
       "quality_details": [
-        "Home pitcher: 3 games (limited)",
-        "Away pitcher: 13 games",
-        "Home team: 62 games",
-        "Away team: 65 games"
+        "Home pitcher: insufficient data",
+        "Away pitcher: insufficient data",
+        "Home team: 64 games",
+        "Away team: 61 games"
       ],
-      "min_confidence_required": 0.15,
+      "min_confidence_required": 0.1,
       "details": {
-        "home_team": "Seattle Mariners",
-        "away_team": "Detroit Tigers",
-        "home_pitcher": "George Kirby",
-        "away_pitcher": "Tarik Skubal"
+        "home_team": "Milwaukee Brewers",
+        "away_team": "Chicago Cubs",
+        "home_pitcher": "Unknown",
+        "away_pitcher": "Unknown"
       },
-      "game_date": "2025-10-10",
-      "home_team": "Seattle Mariners",
-      "away_team": "Detroit Tigers",
-      "home_pitcher": "George Kirby",
-      "away_pitcher": "Tarik Skubal",
+      "game_date": "2025-10-11",
+      "home_team": "Milwaukee Brewers",
+      "away_team": "Chicago Cubs",
+      "home_pitcher": "Unknown",
+      "away_pitcher": "Unknown",
       "grade": "N/A",
       "grade_description": "No Bet",
       "grade_color": "#666",
