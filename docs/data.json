@@ -1,6 +1,6 @@
 {
-  "date": "2025-10-16",
-  "last_updated": "11:02:24 EST",
+  "date": "2025-10-17",
+  "last_updated": "11:02:41 EST",
   "total_games": 2,
   "betting_games": 1,
   "yrfi_count": 1,
@@ -8,65 +8,65 @@
   "predictions": [
     {
       "prediction": "YRFI",
-      "yrfi_probability": 0.5416751423149906,
-      "nrfi_probability": 0.4583248576850094,
-      "confidence": 0.16670056925996235,
-      "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 75,
+      "yrfi_probability": 0.5073898617511521,
+      "nrfi_probability": 0.4926101382488479,
+      "confidence": 0.022169585253456248,
+      "should_bet": false,
+      "data_quality": "fair",
+      "quality_score": 50,
       "quality_details": [
-        "Home pitcher: 5 games",
+        "Home pitcher: insufficient data",
         "Away pitcher: insufficient data",
         "Home team: 62 games",
         "Away team: 64 games"
       ],
-      "min_confidence_required": 0.12,
+      "min_confidence_required": 0.1,
       "details": {
         "home_team": "Los Angeles Dodgers",
         "away_team": "Milwaukee Brewers",
-        "home_pitcher": "Tyler Glasnow",
+        "home_pitcher": "Shohei Ohtani",
         "away_pitcher": "Unknown"
       },
-      "game_date": "2025-10-16",
+      "game_date": "2025-10-17",
       "home_team": "Los Angeles Dodgers",
       "away_team": "Milwaukee Brewers",
-      "home_pitcher": "Tyler Glasnow",
+      "home_pitcher": "Shohei Ohtani",
       "away_pitcher": "Unknown",
-      "grade": "D",
-      "grade_description": "Risky",
-      "grade_color": "#FF5722",
-      "grade_detail": "Low confidence - risky"
-    },
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5058256197102498,
-      "nrfi_probability": 0.49417438028975025,
-      "confidence": 0.023302478840999008,
-      "should_bet": false,
-      "data_quality": "good",
-      "quality_score": 75,
-      "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: insufficient data",
-        "Home team: 62 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Seattle Mariners",
-        "away_team": "Toronto Blue Jays",
-        "home_pitcher": "Luis Castillo",
-        "away_pitcher": "Max Scherzer"
-      },
-      "game_date": "2025-10-16",
-      "home_team": "Seattle Mariners",
-      "away_team": "Toronto Blue Jays",
-      "home_pitcher": "Luis Castillo",
-      "away_pitcher": "Max Scherzer",
       "grade": "N/A",
       "grade_description": "No Bet",
       "grade_color": "#666",
       "grade_detail": "Insufficient confidence"
+    },
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.5562647209421403,
+      "nrfi_probability": 0.4437352790578597,
+      "confidence": 0.2813236047107015,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 100,
+      "quality_details": [
+        "Home pitcher: 10 games",
+        "Away pitcher: 12 games",
+        "Home team: 62 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.15,
+      "details": {
+        "home_team": "Seattle Mariners",
+        "away_team": "Toronto Blue Jays",
+        "home_pitcher": "Bryce Miller",
+        "away_pitcher": "Kevin Gausman"
+      },
+      "game_date": "2025-10-17",
+      "home_team": "Seattle Mariners",
+      "away_team": "Toronto Blue Jays",
+      "home_pitcher": "Bryce Miller",
+      "away_pitcher": "Kevin Gausman",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
     }
   ]
 }
