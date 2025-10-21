@@ -1,41 +1,9 @@
 {
-  "date": "2025-10-20",
-  "last_updated": "11:02:38 EST",
-  "total_games": 1,
-  "betting_games": 1,
-  "yrfi_count": 1,
+  "date": "2025-10-21",
+  "last_updated": "11:02:32 EST",
+  "total_games": 0,
+  "betting_games": 0,
+  "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": [
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5528844432396616,
-      "nrfi_probability": 0.44711555676033843,
-      "confidence": 0.2115377729586463,
-      "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 65,
-      "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 3 games (limited)",
-        "Home team: 63 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Toronto Blue Jays",
-        "away_team": "Seattle Mariners",
-        "home_pitcher": "Shane Bieber",
-        "away_pitcher": "George Kirby"
-      },
-      "game_date": "2025-10-20",
-      "home_team": "Toronto Blue Jays",
-      "away_team": "Seattle Mariners",
-      "home_pitcher": "Shane Bieber",
-      "away_pitcher": "George Kirby",
-      "grade": "C",
-      "grade_description": "Decent",
-      "grade_color": "#F57C00",
-      "grade_detail": "Lower confidence"
-    }
-  ]
+  "predictions": []
 }
