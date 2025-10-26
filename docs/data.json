@@ -1,41 +1,9 @@
 {
-  "date": "2025-10-25",
-  "last_updated": "11:02:15 EST",
-  "total_games": 1,
-  "betting_games": 1,
-  "yrfi_count": 1,
+  "date": "2025-10-26",
+  "last_updated": "11:02:26 EST",
+  "total_games": 0,
+  "betting_games": 0,
+  "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": [
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.6095785039333426,
-      "nrfi_probability": 0.39042149606665744,
-      "confidence": 0.5978925196667129,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 100,
-      "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: 11 games",
-        "Home team: 63 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Toronto Blue Jays",
-        "away_team": "Los Angeles Dodgers",
-        "home_pitcher": "Kevin Gausman",
-        "away_pitcher": "Yoshinobu Yamamoto"
-      },
-      "game_date": "2025-10-25",
-      "home_team": "Toronto Blue Jays",
-      "away_team": "Los Angeles Dodgers",
-      "home_pitcher": "Kevin Gausman",
-      "away_pitcher": "Yoshinobu Yamamoto",
-      "grade": "B+",
-      "grade_description": "Strong",
-      "grade_color": "#388E3C",
-      "grade_detail": "High confidence"
-    }
-  ]
+  "predictions": []
 }
