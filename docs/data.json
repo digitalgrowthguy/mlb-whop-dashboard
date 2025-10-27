@@ -1,9 +1,41 @@
 {
-  "date": "2025-10-26",
-  "last_updated": "11:02:26 EST",
-  "total_games": 0,
-  "betting_games": 0,
-  "yrfi_count": 0,
+  "date": "2025-10-27",
+  "last_updated": "11:02:46 EST",
+  "total_games": 1,
+  "betting_games": 1,
+  "yrfi_count": 1,
   "nrfi_count": 0,
-  "predictions": []
+  "predictions": [
+    {
+      "prediction": "YRFI",
+      "yrfi_probability": 0.5431690732206862,
+      "nrfi_probability": 0.4568309267793138,
+      "confidence": 0.17267629288274478,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 5 games",
+        "Away pitcher: insufficient data",
+        "Home team: 62 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Los Angeles Dodgers",
+        "away_team": "Toronto Blue Jays",
+        "home_pitcher": "Tyler Glasnow",
+        "away_pitcher": "Max Scherzer"
+      },
+      "game_date": "2025-10-27",
+      "home_team": "Los Angeles Dodgers",
+      "away_team": "Toronto Blue Jays",
+      "home_pitcher": "Tyler Glasnow",
+      "away_pitcher": "Max Scherzer",
+      "grade": "D",
+      "grade_description": "Risky",
+      "grade_color": "#FF5722",
+      "grade_detail": "Low confidence - risky"
+    }
+  ]
 }
