@@ -1,6 +1,6 @@
 {
-  "date": "2025-10-28",
-  "last_updated": "11:02:26 EST",
+  "date": "2025-10-29",
+  "last_updated": "11:02:42 EST",
   "total_games": 1,
   "betting_games": 0,
   "yrfi_count": 0,
@@ -24,14 +24,14 @@
       "details": {
         "home_team": "Los Angeles Dodgers",
         "away_team": "Toronto Blue Jays",
-        "home_pitcher": "Shohei Ohtani",
-        "away_pitcher": "Shane Bieber"
+        "home_pitcher": "Blake Snell",
+        "away_pitcher": "Trey Yesavage"
       },
-      "game_date": "2025-10-28",
+      "game_date": "2025-10-29",
       "home_team": "Los Angeles Dodgers",
       "away_team": "Toronto Blue Jays",
-      "home_pitcher": "Shohei Ohtani",
-      "away_pitcher": "Shane Bieber",
+      "home_pitcher": "Blake Snell",
+      "away_pitcher": "Trey Yesavage",
       "grade": "N/A",
       "grade_description": "No Bet",
       "grade_color": "#666",
