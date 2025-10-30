@@ -1,41 +1,9 @@
 {
-  "date": "2025-10-29",
-  "last_updated": "11:02:42 EST",
-  "total_games": 1,
+  "date": "2025-10-30",
+  "last_updated": "11:02:35 EST",
+  "total_games": 0,
   "betting_games": 0,
   "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": [
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5087504059688392,
-      "nrfi_probability": 0.49124959403116075,
-      "confidence": 0.026251217906517743,
-      "should_bet": false,
-      "data_quality": "fair",
-      "quality_score": 50,
-      "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: insufficient data",
-        "Home team: 62 games",
-        "Away team: 63 games"
-      ],
-      "min_confidence_required": 0.1,
-      "details": {
-        "home_team": "Los Angeles Dodgers",
-        "away_team": "Toronto Blue Jays",
-        "home_pitcher": "Blake Snell",
-        "away_pitcher": "Trey Yesavage"
-      },
-      "game_date": "2025-10-29",
-      "home_team": "Los Angeles Dodgers",
-      "away_team": "Toronto Blue Jays",
-      "home_pitcher": "Blake Snell",
-      "away_pitcher": "Trey Yesavage",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
-    }
-  ]
+  "predictions": []
 }
