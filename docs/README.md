@@ -10,7 +10,7 @@ This folder contains the static files for the GitHub Pages deployment.
 
 ## Last Updated
 
-2025-12-07 11:02:19 EST
+2025-12-08 11:02:47 EST
 
 ## Access
 
