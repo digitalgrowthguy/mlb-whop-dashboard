@@ -1,41 +1,9 @@
 {
-  "date": "2026-07-14",
-  "last_updated": "12:05:23 EST",
-  "total_games": 1,
-  "betting_games": 1,
-  "yrfi_count": 1,
+  "date": "2026-07-15",
+  "last_updated": "12:09:21 EST",
+  "total_games": 0,
+  "betting_games": 0,
+  "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": [
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5384538461538462,
-      "nrfi_probability": 0.46154615384615383,
-      "confidence": 0.11536153846153852,
-      "should_bet": true,
-      "data_quality": "fair",
-      "quality_score": 50,
-      "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: 13 games",
-        "Home team: insufficient data",
-        "Away team: insufficient data"
-      ],
-      "min_confidence_required": 0.1,
-      "details": {
-        "home_team": "National League All-Stars",
-        "away_team": "American League All-Stars",
-        "home_pitcher": "Cristopher S\u00e1nchez",
-        "away_pitcher": "Dylan Cease"
-      },
-      "game_date": "2026-07-14",
-      "home_team": "National League All-Stars",
-      "away_team": "American League All-Stars",
-      "home_pitcher": "Cristopher S\u00e1nchez",
-      "away_pitcher": "Dylan Cease",
-      "grade": "F",
-      "grade_description": "Avoid",
-      "grade_color": "#D32F2F",
-      "grade_detail": "Very low confidence"
-    }
-  ]
+  "predictions": []
 }
