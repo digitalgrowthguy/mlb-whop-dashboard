@@ -1,9 +1,41 @@
 {
-  "date": "2026-07-15",
-  "last_updated": "12:09:21 EST",
-  "total_games": 0,
-  "betting_games": 0,
+  "date": "2026-07-16",
+  "last_updated": "12:14:03 EST",
+  "total_games": 1,
+  "betting_games": 1,
   "yrfi_count": 0,
-  "nrfi_count": 0,
-  "predictions": []
+  "nrfi_count": 1,
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4603962651727358,
+      "nrfi_probability": 0.5396037348272642,
+      "confidence": 0.1584149393090568,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 9 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 64 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Philadelphia Phillies",
+        "away_team": "New York Mets",
+        "home_pitcher": "Aaron Nola",
+        "away_pitcher": "Christian Scott"
+      },
+      "game_date": "2026-07-16",
+      "home_team": "Philadelphia Phillies",
+      "away_team": "New York Mets",
+      "home_pitcher": "Aaron Nola",
+      "away_pitcher": "Christian Scott",
+      "grade": "D",
+      "grade_description": "Risky",
+      "grade_color": "#FF5722",
+      "grade_detail": "Low confidence - risky"
+    }
+  ]
 }
