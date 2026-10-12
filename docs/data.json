@@ -1,41 +1,72 @@
 {
-  "date": "2026-10-11",
-  "last_updated": "16:27:46 EST",
-  "total_games": 1,
-  "betting_games": 1,
-  "yrfi_count": 0,
+  "date": "2026-10-12",
+  "last_updated": "20:03:15 EST",
+  "total_games": 2,
+  "betting_games": 2,
+  "yrfi_count": 1,
   "nrfi_count": 1,
   "predictions": [
     {
-      "prediction": "NRFI",
-      "yrfi_probability": 0.4591412056634069,
-      "nrfi_probability": 0.5408587943365931,
-      "confidence": 0.16343517734637247,
+      "prediction": "YRFI",
+      "yrfi_probability": 0.532991202346041,
+      "nrfi_probability": 0.467008797653959,
+      "confidence": 0.16495601173020513,
       "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 75,
+      "data_quality": "excellent",
+      "quality_score": 90,
       "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 13 games",
+        "Home pitcher: 4 games (limited)",
+        "Away pitcher: 11 games",
         "Home team: 64 games",
         "Away team: 62 games"
       ],
-      "min_confidence_required": 0.12,
+      "min_confidence_required": 0.15,
       "details": {
         "home_team": "Milwaukee Brewers",
         "away_team": "Los Angeles Dodgers",
-        "home_pitcher": "Jacob Misiorowski",
-        "away_pitcher": "Tarik Skubal"
+        "home_pitcher": "Logan Henderson",
+        "away_pitcher": "Yoshinobu Yamamoto"
       },
-      "game_date": "2026-10-11",
+      "game_date": "2026-10-12",
       "home_team": "Milwaukee Brewers",
       "away_team": "Los Angeles Dodgers",
-      "home_pitcher": "Jacob Misiorowski",
-      "away_pitcher": "Tarik Skubal",
+      "home_pitcher": "Logan Henderson",
+      "away_pitcher": "Yoshinobu Yamamoto",
       "grade": "D",
       "grade_description": "Risky",
       "grade_color": "#FF5722",
       "grade_detail": "Low confidence - risky"
+    },
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4313459353633927,
+      "nrfi_probability": 0.5686540646366073,
+      "confidence": 0.2746162585464291,
+      "should_bet": true,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 12 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 62 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Tampa Bay Rays",
+        "away_team": "Cleveland Guardians",
+        "home_pitcher": "Drew Rasmussen",
+        "away_pitcher": "Foster Griffin"
+      },
+      "game_date": "2026-10-12",
+      "home_team": "Tampa Bay Rays",
+      "away_team": "Cleveland Guardians",
+      "home_pitcher": "Drew Rasmussen",
+      "away_pitcher": "Foster Griffin",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
     }
   ]
 }
