@@ -1,52 +1,21 @@
 {
-  "date": "2026-10-12",
-  "last_updated": "20:03:15 EST",
-  "total_games": 2,
-  "betting_games": 2,
-  "yrfi_count": 1,
+  "date": "2026-10-13",
+  "last_updated": "17:51:59 EST",
+  "total_games": 1,
+  "betting_games": 1,
+  "yrfi_count": 0,
   "nrfi_count": 1,
   "predictions": [
     {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.532991202346041,
-      "nrfi_probability": 0.467008797653959,
-      "confidence": 0.16495601173020513,
-      "should_bet": true,
-      "data_quality": "excellent",
-      "quality_score": 90,
-      "quality_details": [
-        "Home pitcher: 4 games (limited)",
-        "Away pitcher: 11 games",
-        "Home team: 64 games",
-        "Away team: 62 games"
-      ],
-      "min_confidence_required": 0.15,
-      "details": {
-        "home_team": "Milwaukee Brewers",
-        "away_team": "Los Angeles Dodgers",
-        "home_pitcher": "Logan Henderson",
-        "away_pitcher": "Yoshinobu Yamamoto"
-      },
-      "game_date": "2026-10-12",
-      "home_team": "Milwaukee Brewers",
-      "away_team": "Los Angeles Dodgers",
-      "home_pitcher": "Logan Henderson",
-      "away_pitcher": "Yoshinobu Yamamoto",
-      "grade": "D",
-      "grade_description": "Risky",
-      "grade_color": "#FF5722",
-      "grade_detail": "Low confidence - risky"
-    },
-    {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4313459353633927,
-      "nrfi_probability": 0.5686540646366073,
-      "confidence": 0.2746162585464291,
+      "yrfi_probability": 0.44582557337244255,
+      "nrfi_probability": 0.5541744266275574,
+      "confidence": 0.2166977065102298,
       "should_bet": true,
       "data_quality": "good",
       "quality_score": 75,
       "quality_details": [
-        "Home pitcher: 12 games",
+        "Home pitcher: 13 games",
         "Away pitcher: insufficient data",
         "Home team: 63 games",
         "Away team: 62 games"
@@ -55,14 +24,14 @@
       "details": {
         "home_team": "Tampa Bay Rays",
         "away_team": "Cleveland Guardians",
-        "home_pitcher": "Drew Rasmussen",
-        "away_pitcher": "Foster Griffin"
+        "home_pitcher": "Freddy Peralta",
+        "away_pitcher": "Parker Messick"
       },
-      "game_date": "2026-10-12",
+      "game_date": "2026-10-13",
       "home_team": "Tampa Bay Rays",
       "away_team": "Cleveland Guardians",
-      "home_pitcher": "Drew Rasmussen",
-      "away_pitcher": "Foster Griffin",
+      "home_pitcher": "Freddy Peralta",
+      "away_pitcher": "Parker Messick",
       "grade": "C",
       "grade_description": "Decent",
       "grade_color": "#F57C00",
