@@ -1,42 +1,11 @@
 {
-  "date": "2026-10-15",
-  "last_updated": "15:24:26 EST",
-  "total_games": 2,
-  "betting_games": 2,
-  "yrfi_count": 1,
+  "date": "2026-10-16",
+  "last_updated": "15:04:06 EST",
+  "total_games": 1,
+  "betting_games": 1,
+  "yrfi_count": 0,
   "nrfi_count": 1,
   "predictions": [
-    {
-      "prediction": "YRFI",
-      "yrfi_probability": 0.5416751423149906,
-      "nrfi_probability": 0.4583248576850094,
-      "confidence": 0.16670056925996235,
-      "should_bet": true,
-      "data_quality": "good",
-      "quality_score": 75,
-      "quality_details": [
-        "Home pitcher: 5 games",
-        "Away pitcher: insufficient data",
-        "Home team: 62 games",
-        "Away team: 64 games"
-      ],
-      "min_confidence_required": 0.12,
-      "details": {
-        "home_team": "Los Angeles Dodgers",
-        "away_team": "Milwaukee Brewers",
-        "home_pitcher": "Tyler Glasnow",
-        "away_pitcher": "Unknown"
-      },
-      "game_date": "2026-10-15",
-      "home_team": "Los Angeles Dodgers",
-      "away_team": "Milwaukee Brewers",
-      "home_pitcher": "Tyler Glasnow",
-      "away_pitcher": "Unknown",
-      "grade": "D",
-      "grade_description": "Risky",
-      "grade_color": "#FF5722",
-      "grade_detail": "Low confidence - risky"
-    },
     {
       "prediction": "NRFI",
       "yrfi_probability": 0.45487534712809863,
@@ -46,8 +15,8 @@
       "data_quality": "good",
       "quality_score": 75,
       "quality_details": [
-        "Home pitcher: 12 games",
-        "Away pitcher: insufficient data",
+        "Home pitcher: insufficient data",
+        "Away pitcher: 12 games",
         "Home team: 62 games",
         "Away team: 63 games"
       ],
@@ -55,14 +24,14 @@
       "details": {
         "home_team": "Cleveland Guardians",
         "away_team": "Tampa Bay Rays",
-        "home_pitcher": "Gavin Williams",
-        "away_pitcher": "Griffin Jax"
+        "home_pitcher": "Shawn Armstrong",
+        "away_pitcher": "Nick Martinez"
       },
-      "game_date": "2026-10-15",
+      "game_date": "2026-10-16",
       "home_team": "Cleveland Guardians",
       "away_team": "Tampa Bay Rays",
-      "home_pitcher": "Gavin Williams",
-      "away_pitcher": "Griffin Jax",
+      "home_pitcher": "Shawn Armstrong",
+      "away_pitcher": "Nick Martinez",
       "grade": "D",
       "grade_description": "Risky",
       "grade_color": "#FF5722",
