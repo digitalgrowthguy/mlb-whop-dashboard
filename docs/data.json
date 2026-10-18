@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-17",
-  "last_updated": "13:59:35 EST",
+  "date": "2026-10-18",
+  "last_updated": "14:12:18 EST",
   "total_games": 1,
   "betting_games": 1,
   "yrfi_count": 0,
@@ -8,9 +8,9 @@
   "predictions": [
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.45487534712809863,
-      "nrfi_probability": 0.5451246528719014,
-      "confidence": 0.1804986114876055,
+      "yrfi_probability": 0.4313459353633927,
+      "nrfi_probability": 0.5686540646366073,
+      "confidence": 0.2746162585464291,
       "should_bet": true,
       "data_quality": "good",
       "quality_score": 75,
@@ -24,18 +24,18 @@
       "details": {
         "home_team": "Cleveland Guardians",
         "away_team": "Tampa Bay Rays",
-        "home_pitcher": "Shawn Armstrong",
-        "away_pitcher": "Nick Martinez"
+        "home_pitcher": "Parker Messick",
+        "away_pitcher": "Drew Rasmussen"
       },
-      "game_date": "2026-10-17",
+      "game_date": "2026-10-18",
       "home_team": "Cleveland Guardians",
       "away_team": "Tampa Bay Rays",
-      "home_pitcher": "Shawn Armstrong",
-      "away_pitcher": "Nick Martinez",
-      "grade": "D",
-      "grade_description": "Risky",
-      "grade_color": "#FF5722",
-      "grade_detail": "Low confidence - risky"
+      "home_pitcher": "Parker Messick",
+      "away_pitcher": "Drew Rasmussen",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
     }
   ]
 }
