@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-18",
-  "last_updated": "14:12:18 EST",
+  "date": "2026-10-19",
+  "last_updated": "17:15:55 EST",
   "total_games": 1,
   "betting_games": 1,
   "yrfi_count": 0,
@@ -8,30 +8,30 @@
   "predictions": [
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4313459353633927,
-      "nrfi_probability": 0.5686540646366073,
-      "confidence": 0.2746162585464291,
+      "yrfi_probability": 0.44582557337244255,
+      "nrfi_probability": 0.5541744266275574,
+      "confidence": 0.2166977065102298,
       "should_bet": true,
       "data_quality": "good",
       "quality_score": 75,
       "quality_details": [
-        "Home pitcher: insufficient data",
-        "Away pitcher: 12 games",
-        "Home team: 62 games",
-        "Away team: 63 games"
+        "Home pitcher: 13 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 62 games"
       ],
       "min_confidence_required": 0.12,
       "details": {
-        "home_team": "Cleveland Guardians",
-        "away_team": "Tampa Bay Rays",
-        "home_pitcher": "Parker Messick",
-        "away_pitcher": "Drew Rasmussen"
+        "home_team": "Tampa Bay Rays",
+        "away_team": "Cleveland Guardians",
+        "home_pitcher": "Freddy Peralta",
+        "away_pitcher": "Shawn Armstrong"
       },
-      "game_date": "2026-10-18",
-      "home_team": "Cleveland Guardians",
-      "away_team": "Tampa Bay Rays",
-      "home_pitcher": "Parker Messick",
-      "away_pitcher": "Drew Rasmussen",
+      "game_date": "2026-10-19",
+      "home_team": "Tampa Bay Rays",
+      "away_team": "Cleveland Guardians",
+      "home_pitcher": "Freddy Peralta",
+      "away_pitcher": "Shawn Armstrong",
       "grade": "C",
       "grade_description": "Decent",
       "grade_color": "#F57C00",
