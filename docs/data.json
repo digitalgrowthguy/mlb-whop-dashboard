@@ -1,9 +1,41 @@
 {
-  "date": "2026-10-22",
-  "last_updated": "15:44:21 EST",
-  "total_games": 0,
+  "date": "2026-10-23",
+  "last_updated": "15:32:16 EST",
+  "total_games": 1,
   "betting_games": 0,
   "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": []
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.47916377217553696,
+      "nrfi_probability": 0.520836227824463,
+      "confidence": 0.08334491129785215,
+      "should_bet": false,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: insufficient data",
+        "Away pitcher: 12 games",
+        "Home team: 64 games",
+        "Away team: 63 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Milwaukee Brewers",
+        "away_team": "Tampa Bay Rays",
+        "home_pitcher": "Jacob Misiorowski",
+        "away_pitcher": "Nick Martinez"
+      },
+      "game_date": "2026-10-23",
+      "home_team": "Milwaukee Brewers",
+      "away_team": "Tampa Bay Rays",
+      "home_pitcher": "Jacob Misiorowski",
+      "away_pitcher": "Nick Martinez",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
+    }
+  ]
 }
