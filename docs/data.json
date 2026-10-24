@@ -1,41 +1,41 @@
 {
-  "date": "2026-10-23",
-  "last_updated": "15:32:16 EST",
+  "date": "2026-10-24",
+  "last_updated": "14:10:22 EST",
   "total_games": 1,
-  "betting_games": 0,
+  "betting_games": 1,
   "yrfi_count": 0,
-  "nrfi_count": 0,
+  "nrfi_count": 1,
   "predictions": [
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.47916377217553696,
-      "nrfi_probability": 0.520836227824463,
-      "confidence": 0.08334491129785215,
-      "should_bet": false,
-      "data_quality": "good",
-      "quality_score": 75,
+      "yrfi_probability": 0.4579365079365079,
+      "nrfi_probability": 0.5420634920634921,
+      "confidence": 0.2103174603174604,
+      "should_bet": true,
+      "data_quality": "excellent",
+      "quality_score": 90,
       "quality_details": [
-        "Home pitcher: insufficient data",
+        "Home pitcher: 4 games (limited)",
         "Away pitcher: 12 games",
         "Home team: 64 games",
         "Away team: 63 games"
       ],
-      "min_confidence_required": 0.12,
+      "min_confidence_required": 0.15,
       "details": {
         "home_team": "Milwaukee Brewers",
         "away_team": "Tampa Bay Rays",
-        "home_pitcher": "Jacob Misiorowski",
-        "away_pitcher": "Nick Martinez"
+        "home_pitcher": "Logan Henderson",
+        "away_pitcher": "Drew Rasmussen"
       },
-      "game_date": "2026-10-23",
+      "game_date": "2026-10-24",
       "home_team": "Milwaukee Brewers",
       "away_team": "Tampa Bay Rays",
-      "home_pitcher": "Jacob Misiorowski",
-      "away_pitcher": "Nick Martinez",
-      "grade": "N/A",
-      "grade_description": "No Bet",
-      "grade_color": "#666",
-      "grade_detail": "Insufficient confidence"
+      "home_pitcher": "Logan Henderson",
+      "away_pitcher": "Drew Rasmussen",
+      "grade": "C",
+      "grade_description": "Decent",
+      "grade_color": "#F57C00",
+      "grade_detail": "Lower confidence"
     }
   ]
 }
