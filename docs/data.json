@@ -1,9 +1,41 @@
 {
-  "date": "2026-10-25",
-  "last_updated": "14:41:51 EST",
-  "total_games": 0,
+  "date": "2026-10-26",
+  "last_updated": "17:03:49 EST",
+  "total_games": 1,
   "betting_games": 0,
   "yrfi_count": 0,
   "nrfi_count": 0,
-  "predictions": []
+  "predictions": [
+    {
+      "prediction": "NRFI",
+      "yrfi_probability": 0.4701139984198809,
+      "nrfi_probability": 0.5298860015801191,
+      "confidence": 0.11954400632047646,
+      "should_bet": false,
+      "data_quality": "good",
+      "quality_score": 75,
+      "quality_details": [
+        "Home pitcher: 13 games",
+        "Away pitcher: insufficient data",
+        "Home team: 63 games",
+        "Away team: 64 games"
+      ],
+      "min_confidence_required": 0.12,
+      "details": {
+        "home_team": "Tampa Bay Rays",
+        "away_team": "Milwaukee Brewers",
+        "home_pitcher": "Freddy Peralta",
+        "away_pitcher": "Robert Gasser"
+      },
+      "game_date": "2026-10-26",
+      "home_team": "Tampa Bay Rays",
+      "away_team": "Milwaukee Brewers",
+      "home_pitcher": "Freddy Peralta",
+      "away_pitcher": "Robert Gasser",
+      "grade": "N/A",
+      "grade_description": "No Bet",
+      "grade_color": "#666",
+      "grade_detail": "Insufficient confidence"
+    }
+  ]
 }
