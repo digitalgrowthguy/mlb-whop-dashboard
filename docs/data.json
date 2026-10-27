@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-26",
-  "last_updated": "17:03:49 EST",
+  "date": "2026-10-27",
+  "last_updated": "16:06:31 EST",
   "total_games": 1,
   "betting_games": 0,
   "yrfi_count": 0,
@@ -8,30 +8,30 @@
   "predictions": [
     {
       "prediction": "NRFI",
-      "yrfi_probability": 0.4701139984198809,
-      "nrfi_probability": 0.5298860015801191,
-      "confidence": 0.11954400632047646,
+      "yrfi_probability": 0.49760272108843534,
+      "nrfi_probability": 0.5023972789115647,
+      "confidence": 0.007191836734693979,
       "should_bet": false,
-      "data_quality": "good",
-      "quality_score": 75,
+      "data_quality": "fair",
+      "quality_score": 50,
       "quality_details": [
-        "Home pitcher: 13 games",
+        "Home pitcher: insufficient data",
         "Away pitcher: insufficient data",
         "Home team: 63 games",
         "Away team: 64 games"
       ],
-      "min_confidence_required": 0.12,
+      "min_confidence_required": 0.1,
       "details": {
         "home_team": "Tampa Bay Rays",
         "away_team": "Milwaukee Brewers",
-        "home_pitcher": "Freddy Peralta",
-        "away_pitcher": "Robert Gasser"
+        "home_pitcher": "Griffin Jax",
+        "away_pitcher": "Unknown"
       },
-      "game_date": "2026-10-26",
+      "game_date": "2026-10-27",
       "home_team": "Tampa Bay Rays",
       "away_team": "Milwaukee Brewers",
-      "home_pitcher": "Freddy Peralta",
-      "away_pitcher": "Robert Gasser",
+      "home_pitcher": "Griffin Jax",
+      "away_pitcher": "Unknown",
       "grade": "N/A",
       "grade_description": "No Bet",
       "grade_color": "#666",
